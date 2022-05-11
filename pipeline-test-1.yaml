@@ -1,0 +1,23 @@
+node("bajibaji"){
+    //表示具体的环节，视觉上对应视图上的小方块
+    stage("单元测试"){
+    	//读取gitlab仓库中的yaml文件
+    	checkout(SCM)
+    	echo "执行单元测试动作"
+    }
+    stage("集成测试"){
+    	//获取yaml文件，输出在控制台
+        def res = readFile 'conf.yaml'
+        echo res
+    	echo "执行单元测试动作"
+    }
+     stage("系统测试"){
+    	echo "执行单元测试动作"
+    }
+    stage("性能测试"){
+    	echo "执行单元测试动作"
+    }
+    stage("安全测试"){
+    	echo "执行单元测试动作"
+    }
+}
