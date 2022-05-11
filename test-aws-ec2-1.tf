@@ -4,5 +4,4 @@ resource "aws_instance" "myec2" {
   tags = {
     Name = "coco-test-ec2-rh8-1"
   }
-  vpc_security_group_ids = ["<security_group_id>"]
 }
